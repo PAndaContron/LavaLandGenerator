@@ -1,0 +1,9 @@
+{
+    "id" : "PandaWorldGen",
+    "version" : "0.1.0-SNAPSHOT",
+    "author" : "",
+    "displayName" : "PandaWorldGen",
+    "description" : "",
+    "dependencies" : [],
+    "serverSideOnly" : false
+}
