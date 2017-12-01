@@ -1,4 +1,4 @@
-package org.terasology.pandaworldgen;
+package org.terasology.lavalandgenerator;
 import org.terasology.math.geom.BaseVector2i;
 import org.terasology.math.geom.Rect2i;
 import org.terasology.math.geom.Vector2f;

@@ -1,4 +1,4 @@
-package org.terasology.pandaworldgen;
+package org.terasology.lavalandgenerator;
 import build.classes.org.terasology.core.world.generator.facetProviders.SeaLevelProvider;
 import org.terasology.engine.SimpleUri;
 import org.terasology.registry.In;
@@ -7,12 +7,12 @@ import org.terasology.world.generation.WorldBuilder;
 import org.terasology.world.generator.RegisterWorldGenerator;
 import org.terasology.world.generator.plugin.WorldGeneratorPluginLibrary;
 
-@RegisterWorldGenerator(id = "pandaWorld", displayName = "Panda World Generator")
-public class PandaWorldGenerator extends BaseFacetedWorldGenerator {
+@RegisterWorldGenerator(id = "contronLavaLand", displayName = "Lava Land")
+public class WorldGenerator extends BaseFacetedWorldGenerator {
     @In
     private WorldGeneratorPluginLibrary worldGeneratorPluginLibrary;
     
-    public PandaWorldGenerator(SimpleUri uri) {
+    public WorldGenerator(SimpleUri uri) {
         super(uri);
     }
     
@@ -22,8 +22,9 @@ public class PandaWorldGenerator extends BaseFacetedWorldGenerator {
                 .addProvider(new SurfaceProvider())
                 .addProvider(new SeaLevelProvider(0))
                 .addProvider(new MountainsProvider())
-                .addProvider(new HouseProvider())
-                .addRasterizer(new PandaWorldRasterizer())
-                .addRasterizer(new HouseRasterizer());
+                //.addProvider(new HouseProvider())
+                .addRasterizer(new TerrainRasterizer())
+                //.addRasterizer(new HouseRasterizer())
+                .addPlugins();
     }
 }

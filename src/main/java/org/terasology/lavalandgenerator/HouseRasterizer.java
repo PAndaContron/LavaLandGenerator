@@ -1,5 +1,5 @@
 
-package org.terasology.pandaworldgen;
+package org.terasology.lavalandgenerator;
 
 import org.terasology.math.ChunkMath;
 import org.terasology.math.Region3i;

@@ -1,4 +1,4 @@
-package org.terasology.pandaworldgen;
+package org.terasology.lavalandgenerator;
 import org.terasology.math.ChunkMath;
 import org.terasology.math.geom.Vector3i;
 import org.terasology.registry.CoreRegistry;
@@ -9,12 +9,12 @@ import org.terasology.world.generation.Region;
 import org.terasology.world.generation.WorldRasterizer;
 import org.terasology.world.generation.facets.SurfaceHeightFacet;
 
-public class PandaWorldRasterizer implements WorldRasterizer {
-    private Block dirt;
+public class TerrainRasterizer implements WorldRasterizer {
+    Block stone;
     
     @Override
     public void initialize() {
-        dirt = CoreRegistry.get(BlockManager.class).getBlock("Core:Dirt");
+        stone = CoreRegistry.get(BlockManager.class).getBlock("Core:Stone");
     }
 
     @Override
@@ -23,7 +23,7 @@ public class PandaWorldRasterizer implements WorldRasterizer {
         for(Vector3i position : chunkRegion.getRegion()) {
             float surfaceHeight = surfaceHeightFacet.getWorld(position.x,position.z);
             if(position.y < surfaceHeight) {
-                chunk.setBlock(ChunkMath.calcBlockPos(position),dirt);
+                chunk.setBlock(ChunkMath.calcBlockPos(position),stone);
             }
         }
     }
