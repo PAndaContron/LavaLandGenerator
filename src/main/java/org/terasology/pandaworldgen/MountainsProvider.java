@@ -1,3 +1,4 @@
+package org.terasology.pandaworldgen;
 import org.terasology.entitySystem.Component;
 import org.terasology.math.TeraMath;
 import org.terasology.math.geom.BaseVector2i;

@@ -1,3 +1,4 @@
+package org.terasology.pandaworldgen;
 import org.terasology.math.ChunkMath;
 import org.terasology.math.geom.Vector3i;
 import org.terasology.registry.CoreRegistry;

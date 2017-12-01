@@ -1,3 +1,4 @@
+package org.terasology.pandaworldgen;
 import build.classes.org.terasology.core.world.generator.facetProviders.SeaLevelProvider;
 import org.terasology.engine.SimpleUri;
 import org.terasology.registry.In;
@@ -21,6 +22,8 @@ public class PandaWorldGenerator extends BaseFacetedWorldGenerator {
                 .addProvider(new SurfaceProvider())
                 .addProvider(new SeaLevelProvider(0))
                 .addProvider(new MountainsProvider())
-                .addRasterizer(new PandaWorldRasterizer());
+                .addProvider(new HouseProvider())
+                .addRasterizer(new PandaWorldRasterizer())
+                .addRasterizer(new HouseRasterizer());
     }
 }
